@@ -1,13 +1,18 @@
+---
 kind: pipeline
 name: default
 
+platform:
+  os: linux
+  arch: amd64
+
 steps:
 - name: get code
+  commands:
+  - git pull origin master
   volumes:
   - name: tmp
     path: /tmp/blog
-  commands:
-  - git pull origin master
 
 - name: install
   image: node
@@ -24,3 +29,5 @@ volumes:
 - name: tmp
   host:
     path: /root/blog
+
+...
