@@ -21,6 +21,6 @@ steps:
     - yarn build
 
 volumes:
- - name: tmp
+- name: tmp
   host:
     path: /root/blog
