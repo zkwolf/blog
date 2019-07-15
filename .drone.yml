@@ -9,16 +9,16 @@ steps:
   commands:
   - git pull origin master
 
-  - name: install
-    image: node:10.16.0
-    commands:
-    - yarn --version
-    - yarn install --force
+- name: install
+  image: node:10.16.0
+  commands:
+  - yarn --version
+  - yarn install --force
 
-  - name: build
-    image: node:10.16.0
-    commands:
-    - yarn build
+- name: build
+  image: node:10.16.0
+  commands:
+  - yarn build
 
 volumes:
 - name: tmp
