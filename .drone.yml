@@ -12,14 +12,14 @@ steps:
   commands:
   - yarn --version
   - yarn install
-  volumes:
-  - name: tmp
-    path: /root/blog/dist
 
 - name: build
   image: node
   commands:
   - yarn build
+  volumes:
+  - name: tmp
+    path: /root/blog/dist
 
 volumes:
 - name: tmp
