@@ -14,7 +14,7 @@ steps:
   - yarn install --force
   volumes:
   - name: tmp
-    path: /tmp/blog
+    path: /root/blog/dist
 
 - name: build
   image: node
@@ -24,6 +24,6 @@ steps:
 volumes:
 - name: tmp
   host:
-    path: /root/blog
+    path: /root/blog/dist
 
 ...
