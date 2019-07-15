@@ -11,7 +11,7 @@ steps:
   image: node
   commands:
   - yarn --version
-  - yarn install --force
+  - yarn install
   volumes:
   - name: tmp
     path: /root/blog/dist
