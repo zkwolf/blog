@@ -7,18 +7,14 @@ platform:
   arch: amd64
 
 steps:
-- name: get code
-  commands:
-  - git pull origin master
-  volumes:
-  - name: tmp
-    path: /tmp/blog
-
 - name: install
   image: node
   commands:
   - yarn --version
   - yarn install --force
+  volumes:
+  - name: tmp
+    path: /tmp/blog
 
 - name: build
   image: node
